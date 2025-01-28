@@ -1,0 +1,9 @@
+# iperf3
+
+Another thing we could try is to run the iperf3 tests through the loopback interface to isolate the physical network as part of the problem. To do that:
+# start iperf server on localhost
+iperf -s
+
+# connect to localhost using client
+iperf -c 127.0.0.1 --zerocopy -l1024k
+
